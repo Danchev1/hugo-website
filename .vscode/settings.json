@@ -1,0 +1,15 @@
+{
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": "/themes/hugo-universal-theme/static/css"
+        }
+    ],
+    "liveSassCompile.settings.excludeList": [
+        "**/node_modules/**",
+        ".vscode/**",
+        "themes/hugo-universal-theme/static/sass/bulma/**",
+        "themes/hugo-universal-theme/static/sass/jquery.modal.sass"
+    ],
+}
