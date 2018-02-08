@@ -1,0 +1,25 @@
+{{ if isset .Site.Params "staff" }}
+{{ if .Site.Params.staff.enable }}
+{{ if gt (len .Site.Data.staff) 0 }}
+<div class="content staff-section">
+    <div class="container">
+        <h3 class="title is-3 has-text-centered">{{ .Site.Params.staff.staff_title }}</h3>
+        <p class="has-text-centered">{{ .Site.Params.staff.staff_subtitle }}</p>
+        <div class="columns">
+            {{ range .Site.Data.staff }}
+            <div class="column">
+                <div class="member">
+                    <div class="has-text-centered">
+                        <img src="{{ .img_url }}" alt="{{ .img_alt }}">
+                        <span class="name">{{ .name }}<span class="title">{{ .company_title }}</span></span>
+                    </div>
+                    <p>{{ .content | markdownify }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}
+{{ end }}
+{{ end }}

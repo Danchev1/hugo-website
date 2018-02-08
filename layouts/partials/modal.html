@@ -1,0 +1,22 @@
+{{ if isset .Site.Params "modal" }} {{ if .Site.Params.modal.enable }}
+<div id="getStarted-modal" class="jq-modal">
+        <div class="center-modal content">
+                <img src="{{ .Site.Params.modal.img_url }}" alt="{{ .Site.Params.modal.img_alt }}">
+                <div class="title is-3">{{ .Site.Params.modal.title }}</div>
+                <p class="description">{{ .Site.Params.modal.content }}</p>
+                <form class="form" action="">
+                        <div class="field is-grouped">
+                                <p class="control is-expanded">
+                                        <input class="input is-medium" type="mail" placeholder="{{ .Site.Params.modal.placeholder}}">
+                                </p>
+                                <p class="control">
+                                        <a class="button is-black is-medium is-uppercase">
+                                        {{ .Site.Params.modal.btn_text}}
+                                        </a>
+                                </p>
+                        </div>
+                </form>
+                <p class="policy">{{ .Site.Params.modal.policy }}</p>
+        </div>
+</div>
+{{ end }} {{ end }}

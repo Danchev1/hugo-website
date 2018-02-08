@@ -1,0 +1,24 @@
+{{ if isset .Site.Params "purchase_options" }}
+{{ if .Site.Params.purchase_options.enable }}
+{{ if gt (len .Site.Data.purchase_options) 0 }}
+<section class="content purchase-options-section">
+    <div class="container">
+        <div class="columns">
+            {{ range .Site.Data.purchase_options }}
+            <div class="column is-6">
+                <div class="coupon">
+                    <h3 class="title is-3">
+                       <span>{{ .free }}</span>
+                        {{ .title }}
+                    </h3>
+                    <p class="description">{{ .description }}</p>
+                    <a href="{{ .link_url }}" class="open-modal button is-black is-medium is-uppercase">{{ .link_text }}</a>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{ end }}

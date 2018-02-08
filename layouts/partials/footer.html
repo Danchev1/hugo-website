@@ -1,0 +1,31 @@
+<footer id="footer" class="footer">
+        <div class="container">
+            <div class="content">
+                <div class="columns">
+                    <div class="column">
+                        <ul class="bottom-nav">
+                            {{ range .Site.Menus.bottom_menu }}
+                                <li><a href="{{ .URL }}" class="is-uppercase">{{ .Name }}</a></li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ if .Site.Params.social_links.enable }}
+        <div class="social-links">
+          <div class="container">
+              <div class="content">
+                <div class="columns">
+                    <div class="column has-text-centered">
+                      {{ range .Site.Menus.social_links.ByWeight }}
+                      <a href="{{ .URL }}" target="_blank" class="is-white has-text-white">{{ .Pre }}</a>
+                      {{ end }}
+                    </div>
+                </div>
+              </div>
+          </div>
+        </div>
+{{ end }}
+</footer>
+

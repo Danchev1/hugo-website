@@ -1,0 +1,208 @@
+baseurl = "https://veridens.com"
+title = "Veridens"
+languageCode = "en-us"
+# Site language. Available translations in the theme's `/i18n` directory.
+defaultContentLanguage = "en"
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+
+[menu]
+
+# Main menu
+
+[[menu.main]]
+    name = "Product"
+    url  = "/product"
+    weight = 1
+
+[[menu.main]]
+    name = "Pricing"
+    url  = "/pricing"
+    weight = 2
+
+[[menu.main]]
+    name = "login"
+    identifier = "faq"
+    url  = "/login"
+    weight = 3
+
+# Bottom menu
+
+[[menu.bottom_menu]]
+    name = "Home"
+    url  = "/"
+    weight = 1
+
+[[menu.bottom_menu]]
+    name = "Product"
+    url  = "/product/"
+    weight = 5
+
+[[menu.bottom_menu]]
+    name = "Pricing"
+    url  = "/pricing"
+    weight = 2
+
+[[menu.bottom_menu]]
+    name = "Company"
+    url  = "/company"
+    weight = 3
+
+[[menu.bottom_menu]]
+    name = "Contact us"
+    url  = "/contact/"
+    weight = 4
+
+# Top bar social links menu
+
+[[menu.social_links]]
+    weight = 1
+    name = "Facebook"
+    url = "https://www.facebook.com/veridens/"
+    pre = "<i class='fa fa-facebook'></i>"
+
+[[menu.social_links]]
+    weight = 2
+    name = "Linkedin"
+    url = "https://www.linkedin.com/company/18041018/"
+    pre = "<i class='fa fa-linkedin'></i>"
+
+
+[params]
+    author = "Veridens"
+    defaultKeywords = ["Veridens"]
+    defaultDescription = "Site template made by devcows using hugo"
+    navigationBtn = "Get started"
+    email = "info@veridens.com"
+    style="main"
+    company_phone = "+46 455-341030"
+    about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
+
+    # Format dates with Go's time formatting
+    date_format = "January 2, 2006"
+
+    logo = "img/logo.png"
+    address = """<address><strong>Veridens</strong>
+        <br>Campus Gräsvik 2
+        <br>SE-371 75
+        <br>Karlskrona
+        <br>Sweden
+      </address>
+      """
+
+[params.contact]
+    enable = true
+    img_url = "img/mail.png"
+    img_text = "mail"
+    title = "Do you want to know more?"
+    subtitle = "You are always welcome to contact us"
+
+[params.social_links]
+    enable = true
+
+[params.modal]
+    enable = true
+    img_url = "img/magnify.png"
+    img_alt = "Magnify cloud"
+    title = "Let's get started"
+    content = "Create your Veridens account and secure your business in a modern framework. Already have a Veridens account? Log in here"
+    policy = "By clicking Sign Up, I agree to Veridens’Terms of Service and Privacy Policy"
+    placeholder = "Your email..."
+    btn_text = "Sign up"
+
+[params.homepage_info_section_1]
+    enable = true
+    title = "The compliance tool"
+    content = "We enable convenient and expedient compliance and certification processes, including self audits, pre-certification testing and complete certification."
+    img_url = "img/tablet.png"
+    img_alt = "Tabled with IDUN app"
+    btn_text = "Get started"
+    lini_ref = "#getStarted-modal"
+
+[params.homepage_info_section_2]
+    enable = true
+    title = "Product info/teaser"
+    content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna."
+    link_url = "/product"
+    link_text = "Learn more"
+    img_url = "img/app_features.png"
+    img_alt = "Applications features"
+
+[params.homepage_info_section_3]
+    enable = true
+    title = "Company information"
+    content = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna."
+    link_url = "/company"
+    link_text = "Learn more"
+    img_url = "img/cycle_flow.png"
+    img_alt = "Applications flow"
+
+[params.product_info_section_1]
+    enable = true
+    title= "Benefit - shops"
+    content= "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna."
+    img_url= "img/product_teaser.png"
+    img_alt= "Product teaser"
+
+[params.product_info_section_2]
+    enable = true
+    title= "Benefit - auditor"
+    content= "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna."
+    img_url= "img/product_teaser.png"
+    img_alt= "Product teaser"
+
+[params.carousel]
+    enable = true
+    # at 'data/carousel'.
+
+[params.features]
+    enable = true
+    title = "What do you get"
+    main_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. "
+    # at 'data/features'.
+
+[params.testimonials]
+    enable = true
+    # All testimonials are defined in their own files. You can find example items
+    # at 'exampleSite/data/testimonials'.
+    # For more informtion take a look at the README.
+    title = "What our users say"
+    
+[params.see_product]
+    enable = true
+    title = "Let's go"
+    subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id."
+    link_url = "/product"
+    link_text = "Product"
+
+[params.see_pricing]
+    enable = true
+    title = "Let's go"
+    subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id."
+    link_url = "/pricing"
+    link_text = "Pricing"
+
+[params.mission]
+    enable = true
+    title = "Our Mission"
+    subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna."
+
+[params.clients]
+    enable = true
+    # All clients are defined in their own files. You can find example items
+    # at 'exampleSite/data/clients'.
+    # For more informtion take a look at the README.
+    title = "We have worked with"
+    subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. "
+
+[params.faq]
+    enable = true
+    title = "Frequently asked quiestions"
+
+[params.purchase_options]
+    enable = true
+
+[params.staff]
+  enable = true
+  staff_title = "The people behind"
+  staff_subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque."

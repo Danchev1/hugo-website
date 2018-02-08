@@ -1,0 +1,73 @@
+@import "custom_mixin_fonts"
+
+//Font Faces init
++font-face('OpenSans', '../fonts/opensans-regular-webfont', 400, normal)
++font-face('OpenSans-Semibold', '../fonts/opensans-semibold-webfont', 600, normal)
++font-face('OpenSans-Bold', '../fonts/opensans-bold-webfont', 600, normal)
++font-face('OpenSans-Italic', '../fonts/opensans-italic-webfont', 400, italic)
+
+$opensans-regular: 'OpenSans', "Arial", sans-serif !default
+$opensans-semibold: 'OpenSans-Semibold', "Arial", sans-serif !default
+$opensans-bold: 'OpenSans-Bold', "Arial", sans-serif !default
+$opensans-regular-italic: 'OpenSans-Italic', "Arial", sans-serif !default
+
+$blue: 	hsl(195, 86%, 42%) !default
+$yellow: hsl(44, 100%, 53%) !default
+$orange: 	hsl(36, 100%, 52%) !default
+$purple: hsl(256, 100%, 75%) !default
+$green-darker: hsl(171, 73%, 36%) !default
+$green-dark: hsl(154, 67%, 47%) !default
+$green: hsl(145, 77%, 57%) !default
+$green-lighter: hsl(139, 100%, 81%) !default
+$red: 	hsl(0, 100%, 69%) !default
+$white-ter: hsl(156, 20%, 95%) !default
+$white-bis: hsl(0, 0%, 98%) !default
+$white:  hsl(0, 0%, 100%) !default
+$black: hsl(0, 0%, 0%) !default
+$grey-darker: hsl(180, 7%, 15%)
+$grey-dark: hsl(150, 6%, 69%) !default
+$grey: hsl(0, 0%, 75%) !default
+$grey-light: 	hsl(0, 0%, 90%) !default
+$grey-lighter: 	hsl(240, 12%, 97%) !default
+$family-monospace: monospace !default
+$family-sans-serif: $opensans-regular
+$size-1: 4.25rem !default
+$size-2: 3.25rem !default
+$size-3: 2.25rem !default
+$size-4: 1.25rem !default
+//$size-5: 1.3rem !default
+$size-6: 1rem !default
+//$size-7: 0.75rem !default
+
+$primary: $green-dark !default
+$info: $blue !default
+$success: $green !default
+$warning: $yellow !default
+$danger: $red !default
+$light: $white-ter !default
+$dark: $grey-darker !default
+$light-invert: $dark !default
+$dark-invert: $light !default
+$text: $black
+$radius: 0
+$gap: 32px !default
+$fullhd: 1200px + (2 * $gap) !default
+@import "official/sass/utilities/initial-variables.sass"
+@import "official/sass/utilities/functions.sass"
+$orange-invert: findColorInvert($orange) !default
+$yellow-invert: findColorInvert($yellow) !default
+$green-invert: findColorInvert($green-dark) !default
+$blue-invert: findColorInvert($blue) !default
+$purple-invert: findColorInvert($purple) !default
+$red-invert: findColorInvert($red) !default
+$link-hover: $green-dark
+@import "official/sass/utilities/derived-variables.sass"
+$primary-invert: $purple-invert !default
+$info-invert: $blue-invert !default
+$success-invert: $green-invert !default
+$warning-invert: $yellow-invert !default
+$danger-invert: $red-invert !default
+@import "official/sass/utilities/animations.sass"
+@import "official/sass/utilities/mixins.sass"
+@import "official/sass/utilities/controls.sass"
+

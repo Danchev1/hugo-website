@@ -1,0 +1,20 @@
+{{ if isset .Site.Params "homepage_info_section_2" }}
+{{ if .Site.Params.homepage_info_section_2.enable }}
+<section class="content info-section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+              <img src="{{ .Site.Params.homepage_info_section_2.img_url }}" alt="{{ .Site.Params.homepage_info_section_2.img_alt }}">
+            </div>
+            <div class="column">
+                <h2 class="title is-3 margin-top">{{ .Site.Params.homepage_info_section_2.title }}</h2>
+                <p>{{ .Site.Params.homepage_info_section_2.content }}</p>
+                <br>
+                <br>
+                <a href="{{ .Site.Params.homepage_info_section_2.link_url }}" class="button is-uppercase is-primary is-medium">{{ .Site.Params.homepage_info_section_2.link_text }}</a>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,28 @@
+{{ if isset .Site.Params "testimonials" }}
+{{ if .Site.Params.testimonials.enable }}
+{{ if gt (len .Site.Data.testimonials) 0 }}
+<section class="content testimonials-section">
+    <div class="container">
+        <h2 class="title is-3 has-text-centered">{{ .Site.Params.testimonials.title }}</h2>
+        <!-- *** TESTIMONIALS CAROUSEL *** -->
+        <div class="columns">
+            <div class="column">
+                <div class="owl-carousel testimonials same-height-row">
+                    {{ range .Site.Data.testimonials }}
+                    <div class="item">
+                        <div class="testimonial same-height-always">
+                            <div class="text">
+                                <p>{{ .text | markdownify }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.bar -->
+{{ end }}
+{{ end }}
+{{ end }}

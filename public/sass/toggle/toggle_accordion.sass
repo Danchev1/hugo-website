@@ -1,0 +1,33 @@
+.panel-content
+  display: none
+  padding-bottom: 1.875em
+
+.toggle-panel
+  border-bottom: 1px solid #e6ebe6
+  .icon
+    width: 1rem
+    height: 1rem
+    float: right
+    transition: all .4s ease
+    transform: rotateZ(0)
+  &.active
+    .icon
+      transform: rotateZ(-180deg)
+      color: $green-dark
+  .panel-heading
+    padding: 1.5em 0
+    background: none
+    border: none
+    cursor: pointer
+    .title
+      float: left
+      width: 91%
+      margin-bottom: 0!important
+      font-family: $opensans-bold
+      font-weight: $weight-bold
+    &:hover
+      .icon
+        color: $green-dark
+  .panel-content
+    @media screen and (min-width: 1024px)
+      width: 92%

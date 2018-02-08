@@ -1,0 +1,30 @@
+<div class="content contact-section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="contact-info">
+                    {{ if isset .Site.Params "contact" }}
+                    {{ if .Site.Params.contact.enable }}
+                    <img src="{{ .Site.Params.contact.img_url }}" alt="{{ .Site.Params.contact.img_alt }}">
+                    <h3 class="title is-3">
+                        {{ .Site.Params.contact.title }}
+                        <span>{{ .Site.Params.contact.subtitle }}</span>
+                    </h3>
+                    {{ end }}
+                    {{ end }}
+                    <address>
+                        {{ if isset .Site.Params "email" }}
+                        <a href="mailto:{{ .Site.Params.email }}"><strong>{{ .Site.Params.email }}</strong></a><br><br>
+                        {{ end }}
+                        {{ if isset .Site.Params "company_phone" }}
+                        <a href="tel:{{ .Site.Params.company_phone }}" class="phone">+46 455-341030</a><br><br>
+                        {{ end }}
+                        {{ if isset .Site.Params "address" }}
+                        {{ .Site.Params.address | markdownify }}
+                        {{ end }}
+                    </address>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

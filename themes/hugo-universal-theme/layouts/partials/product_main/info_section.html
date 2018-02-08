@@ -1,0 +1,35 @@
+
+{{ if isset .Site.Params "product_info_section_1" }}
+{{ if .Site.Params.product_info_section_1.enable }}
+<section class="content info-section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+              <img src="{{ .Site.Params.product_info_section_1.img_url }}" alt="{{ .Site.Params.product_info_section_1.img_alt }}">
+            </div>
+            <div class="column">
+                <h2 class="title is-3 margin-top">{{ .Site.Params.product_info_section_1.title }}</h2>
+                <p>{{ .Site.Params.product_info_section_1.content }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{ if isset .Site.Params "product_info_section_2" }}
+{{ if .Site.Params.product_info_section_2.enable }}
+<section class="content info-section">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <h2 class="title is-3 margin-top">{{ .Site.Params.product_info_section_2.title }}</h2>
+                <p>{{ .Site.Params.product_info_section_2.content }}</p>
+            </div>
+            <div class="column">
+                <img src="{{ .Site.Params.product_info_section_2.img_url }}" alt="{{ .Site.Params.product_info_section_2.img_alt }}">
+              </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}

@@ -1,0 +1,27 @@
+{{ if isset .Site.Params "clients" }} {{ if .Site.Params.clients.enable }} {{ if gt (len .Site.Data.clients) 0 }}
+<section class="company-clients">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <div class="content has-text-centered">
+                    <h3 class="title is-3">{{ .Site.Params.clients.title }}</h3>
+                    <p class="description">{{ .Site.Params.clients.subtitle }}</p>
+                </div>
+                <div class="owl-carousel customers">
+                    {{ range .Site.Data.clients }}
+                    <div class="item" title="{{ .name }}">
+                        {{ if .url }}
+                        <a href="{{ .url }}" target="_blank">
+                            <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" />
+                        </a>
+                        {{ else }}
+                        <img src="{{ .image }}" alt="{{ .name }}" class="img-responsive" /> {{ end }}
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+            <!-- /.owl-carousel -->
+        </div>
+    </div>
+</section>
+{{ end }} {{ end }} {{ end }}
