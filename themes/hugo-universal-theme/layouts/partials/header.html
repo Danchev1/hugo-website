@@ -13,10 +13,12 @@
         </div>
         <div class="navbar-menu" role="navigation" id="navMenu">
             <div class="navbar-end">
-                  {{ range .Site.Menus.main }}
-                    <a href="{{ .URL }}" class="navbar-item is-uppercase">{{ .Name }}</a>
-                  {{ end }}
-                  <span class="navbar-item"><a href="#getStarted-modal" class="open-modal button is-success is-outlined is-uppercase" rel="modal:open">{{ .Site.Params.navigationBtn }}</a></span>
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="navbar-item is-uppercase">{{ .Name }}</a>
+                {{ end }}
+                <span class="navbar-item">
+                    <a href="#getStarted-modal" class="open-modal button is-success is-outlined is-uppercase" rel="modal:open">{{ .Site.Params.navigationBtn }}</a>
+                </span>
             </div>
         </div>
     </nav>
