@@ -8,7 +8,7 @@ if ($.cookie('themeLayout')) {
   $('body').addClass($.cookie('themeLayout'))
 }
 
-$('a.open-modal').click(function () {
+$('a.open-modal').click(function() {
   $(this).modal({
     fadeDuration: 250,
     modalClass: 'jq-modal'
@@ -16,7 +16,7 @@ $('a.open-modal').click(function () {
   return false
 })
 
-$(function () {
+$(function() {
   sliderHomepage()
   sliders()
   fullScreenContainer()
@@ -26,11 +26,11 @@ $(function () {
   contactForm()
 })
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0)
   if ($navbarBurgers.length > 0) {
-    $navbarBurgers.forEach(function ($el) {
-      $el.addEventListener('click', function () {
+    $navbarBurgers.forEach(function($el) {
+      $el.addEventListener('click', function() {
         var target = $el.dataset.target
         var $target = document.getElementById(target)
         $el.classList.toggle('is-active')
@@ -41,26 +41,30 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 // Ajax contact
-function contactForm () {
+function contactForm() {
   var form = $('.contact-form')
-  form.submit(function () {
+  form.submit(function() {
     $this = $(this)
-    $.post($(this).attr('action'),
+    $.post(
+      $(this).attr('action'),
       $this.serialize(),
-      function () {
+      function() {
         $this[0].reset() // clear form
 
         $('#contact-message')
-          .html('<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>Thank you for getting in touch. We will get back to you soon!</div>')
+          .html(
+            '<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>Thank you for getting in touch. We will get back to you soon!</div>'
+          )
           .fadeIn()
-      }
-      , 'json')
+      },
+      'json'
+    )
     return false
   })
 }
 
 /* slider homepage */
-function sliderHomepage () {
+function sliderHomepage() {
   if ($('#slider').length) {
     // var owl = $('#slider')
 
@@ -75,7 +79,7 @@ function sliderHomepage () {
 }
 
 /* sliders */
-function sliders () {
+function sliders() {
   if ($('.owl-carousel').length) {
     $('.customers').owlCarousel({
       margin: 25,
@@ -104,55 +108,77 @@ function sliders () {
 }
 
 /* menu sliding */
-function menuSliding () {
-  $('.dropdown').on('show.bs.dropdown', function () {
+function menuSliding() {
+  $('.dropdown').on('show.bs.dropdown', function() {
     if ($(window).width() > 750) {
-      $(this).find('.dropdown-menu').first().stop(true, true).slideDown()
+      $(this)
+        .find('.dropdown-menu')
+        .first()
+        .stop(true, true)
+        .slideDown()
     } else {
-      $(this).find('.dropdown-menu').first().stop(true, true).show()
+      $(this)
+        .find('.dropdown-menu')
+        .first()
+        .stop(true, true)
+        .show()
     }
   })
 
-  $('.dropdown').on('hide.bs.dropdown', function () {
+  $('.dropdown').on('hide.bs.dropdown', function() {
     if ($(window).width() > 750) {
-      $(this).find('.dropdown-menu').first().stop(true, true).slideUp()
+      $(this)
+        .find('.dropdown-menu')
+        .first()
+        .stop(true, true)
+        .slideUp()
     } else {
-      $(this).find('.dropdown-menu').first().stop(true, true).hide()
+      $(this)
+        .find('.dropdown-menu')
+        .first()
+        .stop(true, true)
+        .hide()
     }
   })
 }
 
-function animationsSlider () {
+function animationsSlider() {
   var delayTimeSlider = 400
 
-  $('.owl-item:not(.active) [data-animate-always]').each(function () {
+  $('.owl-item:not(.active) [data-animate-always]').each(function() {
     $(this).removeClass('animated')
     $(this).removeClass($(this).data('animate-always'))
-    $(this).stop(true, true, true).css({opacity: 0})
+    $(this)
+      .stop(true, true, true)
+      .css({ opacity: 0 })
   })
 
-  $('.owl-item.active [data-animate-always]').each(function () {
+  $('.owl-item.active [data-animate-always]').each(function() {
     delayTimeSlider += 500
 
-    $(this).delay(delayTimeSlider).queue(function () {
-      $(this).addClass('animated')
-      $(this).addClass($(this).data('animate-always'))
+    $(this)
+      .delay(delayTimeSlider)
+      .queue(function() {
+        $(this).addClass('animated')
+        $(this).addClass($(this).data('animate-always'))
 
-      console.log($(this).data('animate-always'))
-    })
+        console.log($(this).data('animate-always'))
+      })
   })
 }
 
 /* picture zoom */
-function pictureZoom () {
-  $('.product .image, .post .image, .photostream div').each(function () {
-    var imgHeight = $(this).find('img').height()
+function pictureZoom() {
+  $('.product .image, .post .image, .photostream div').each(function() {
+    var imgHeight = $(this)
+      .find('img')
+      .height()
     $(this).height(imgHeight)
   })
 }
 
 /* full screen intro */
-function fullScreenContainer () {
+function fullScreenContainer() {
   var screenWidth = $(window).width() + 'px'
   var screenHeight = '500px'
 
@@ -167,32 +193,38 @@ function fullScreenContainer () {
 }
 
 /* product detail gallery */
-function productDetailGallery (confDetailSwitch) {
+function productDetailGallery(confDetailSwitch) {
   $('.thumb:first').addClass('active')
   var timer = setInterval(autoSwitch, confDetailSwitch)
 
-  $('.thumb').click(function (e) {
+  $('.thumb').click(function(e) {
     switchImage($(this))
     clearInterval(timer)
     timer = setInterval(autoSwitch, confDetailSwitch)
     e.preventDefault()
   })
 
-  $('#mainImage').hover(function () {
-    clearInterval(timer)
-  }, function () {
-    timer = setInterval(autoSwitch, confDetailSwitch)
-  })
+  $('#mainImage').hover(
+    function() {
+      clearInterval(timer)
+    },
+    function() {
+      timer = setInterval(autoSwitch, confDetailSwitch)
+    }
+  )
 
-  function autoSwitch () {
-    var nextThumb = $('.thumb.active').closest('div').next('div').find('.thumb')
+  function autoSwitch() {
+    var nextThumb = $('.thumb.active')
+      .closest('div')
+      .next('div')
+      .find('.thumb')
     if (nextThumb.length === 0) {
       nextThumb = $('.thumb:first')
     }
     switchImage(nextThumb)
   }
 
-  function switchImage (thumb) {
+  function switchImage(thumb) {
     $('.thumb').removeClass('active')
     var bigUrl = thumb.attr('href')
     thumb.addClass('active')
@@ -201,24 +233,26 @@ function productDetailGallery (confDetailSwitch) {
 }
 
 /* product detail sizes */
-function productDetailSizes () {
-  $('.sizes a').click(function (e) {
+function productDetailSizes() {
+  $('.sizes a').click(function(e) {
     e.preventDefault()
     $('.sizes a').removeClass('active')
     $('.size-input').prop('checked', false)
     $(this).addClass('active')
-    $(this).next('input').prop('checked', true)
+    $(this)
+      .next('input')
+      .prop('checked', true)
   })
 }
 
-$.fn.alignElementsSameHeight = function () {
-  $('.same-height-row').each(function () {
+$.fn.alignElementsSameHeight = function() {
+  $('.same-height-row').each(function() {
     var maxHeight = 0
     var children = $(this).find('.same-height')
     children.height('auto')
 
     if ($(window).width() > 768) {
-      children.each(function () {
+      children.each(function() {
         if ($(this).innerHeight() > maxHeight) {
           maxHeight = $(this).innerHeight()
         }
@@ -229,7 +263,7 @@ $.fn.alignElementsSameHeight = function () {
     maxHeight = 0
     children = $(this).find('.same-height-always')
     children.height('auto')
-    children.each(function () {
+    children.each(function() {
       if ($(this).height() > maxHeight) {
         maxHeight = $(this).innerHeight()
       }
@@ -239,18 +273,18 @@ $.fn.alignElementsSameHeight = function () {
 }
 
 var windowWidth
-$(function () {
+$(function() {
   windowWidth = $(window).width()
 
   $(this).alignElementsSameHeight()
   pictureZoom()
 })
 
-$(window).resize(function () {
+$(window).resize(function() {
   var newWindowWidth = $(window).width()
 
   if (windowWidth !== newWindowWidth) {
-    setTimeout(function () {
+    setTimeout(function() {
       $(this).alignElementsSameHeight()
       fullScreenContainer()
       pictureZoom()
