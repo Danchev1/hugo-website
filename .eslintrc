@@ -3,5 +3,14 @@
   "plugins": ["standard", "promise", "prettier"],
   "env": {
     "jquery": true
-  }
+  },
+  "prettier/prettier": [
+    "error",
+    {
+      "semi": false,
+      "trailingComma": "es5",
+      "singleQuote": true,
+      "printWidth": 120
+    }
+  ]
 }
