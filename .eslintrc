@@ -1,6 +1,6 @@
 {
   "extends": ["standard", "prettier"],
-  "plugins": ["standard", "promise", "prettier"],
+  "plugins": ["standard", "prettier"],
   "env": {
     "jquery": true
   },
