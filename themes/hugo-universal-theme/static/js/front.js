@@ -8,7 +8,7 @@ if ($.cookie('themeLayout')) {
   $('body').addClass($.cookie('themeLayout'))
 }
 
-$('a.open-modal').click(function() {
+$('a.open-modal').click(function () {
   $(this).modal({
     fadeDuration: 250,
     modalClass: 'jq-modal'
