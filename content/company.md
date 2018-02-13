@@ -1,6 +1,6 @@
 +++
 title = "Company"
-description = "About Veridens"
-keywords = ["About us","Veridens"]
+description = "About Narnia"
+keywords = ["About us","Narnia"]
 id="company"
 +++

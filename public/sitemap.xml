@@ -3,33 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://veridens.com/categories/</loc>
+    <loc>https://hugo-theme.com/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://veridens.com/company/</loc>
+    <loc>https://hugo-theme.com/company/</loc>
   </url>
   
   <url>
-    <loc>https://veridens.com/contact/</loc>
+    <loc>https://hugo-theme.com/contact/</loc>
   </url>
   
   <url>
-    <loc>https://veridens.com/pricing/</loc>
+    <loc>https://hugo-theme.com/faq/</loc>
   </url>
   
   <url>
-    <loc>https://veridens.com/product/</loc>
+    <loc>https://hugo-theme.com/pricing/</loc>
   </url>
   
   <url>
-    <loc>https://veridens.com/tags/</loc>
+    <loc>https://hugo-theme.com/product/</loc>
+  </url>
+  
+  <url>
+    <loc>https://hugo-theme.com/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://veridens.com/</loc>
+    <loc>https://hugo-theme.com/tags/</loc>
     <priority>0</priority>
   </url>
   

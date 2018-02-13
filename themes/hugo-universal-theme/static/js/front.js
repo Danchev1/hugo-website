@@ -11,7 +11,7 @@ if ($.cookie('themeLayout')) {
 $('a.open-modal').click(function () {
   $(this).modal({
     fadeDuration: 250,
-    modalClass: 'jq-modal'
+    modalClass: 'jq-modal'  
   })
   return false
 })

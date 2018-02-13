@@ -1,5 +1,5 @@
 baseurl = "https://hugo-theme.com"
-title = "Bulma Theme"
+title = "Site title"
 languageCode = "en-us"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
@@ -58,22 +58,22 @@ googleAnalytics = ""
 [[menu.social_links]]
     weight = 1
     name = "Facebook"
-    url = "https://www.facebook.com/veridens/"
+    url = "https://www.facebook.com/"
     pre = "<i class='fa fa-facebook'></i>"
 
 [[menu.social_links]]
     weight = 2
     name = "Linkedin"
-    url = "https://www.linkedin.com/company/18041018/"
+    url = "https://www.linkedin.com/"
     pre = "<i class='fa fa-linkedin'></i>"
 
 
 [params]
-    author = "Veridens"
-    defaultKeywords = ["Veridens"]
+    author = "Nemo"
+    defaultKeywords = ["Nemo"]
     defaultDescription = "Site template made by devcows using hugo"
     navigationBtn = "Get started"
-    email = "info@veridens.com"
+    email = "narnia@water.com"
     style="main"
     company_phone = "+46 455-341030"
     about_us = "<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>"
@@ -82,11 +82,11 @@ googleAnalytics = ""
     date_format = "January 2, 2006"
 
     logo = "img/logo.png"
-    address = """<address><strong>Veridens</strong>
-        <br>Campus Gräsvik 2
+    address = """<address><strong>Narnia</strong>
+        <br>Narnia str 33
         <br>SE-371 75
-        <br>Karlskrona
-        <br>Sweden
+        <br>300ft under
+        <br>Water
       </address>
       """
 
@@ -105,8 +105,8 @@ googleAnalytics = ""
     img_url = "img/magnify.png"
     img_alt = "Magnify cloud"
     title = "Let's get started"
-    content = "Create your Veridens account and secure your business in a modern framework. Already have a Veridens account? Log in here"
-    policy = "By clicking Sign Up, I agree to Veridens’Terms of Service and Privacy Policy"
+    content = "Create your Narnia account and secure your business in a modern framework. Already have a Narnia account? Log in here"
+    policy = "By clicking Sign Up, I agree to Narnia’Terms of Service and Privacy Policy"
     placeholder = "Your email..."
     btn_text = "Sign up"
 
@@ -153,19 +153,16 @@ googleAnalytics = ""
 
 [params.carousel]
     enable = true
-    # at 'data/carousel'.
 
 [params.features]
     enable = true
     title = "What do you get"
     main_description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. "
-    # at 'data/features'.
 
 [params.testimonials]
     enable = true
     # All testimonials are defined in their own files. You can find example items
-    # at 'exampleSite/data/testimonials'.
-    # For more informtion take a look at the README.
+    # at '/data/testimonials'.
     title = "What our users say"
     
 [params.see_product]
@@ -190,8 +187,7 @@ googleAnalytics = ""
 [params.clients]
     enable = true
     # All clients are defined in their own files. You can find example items
-    # at 'exampleSite/data/clients'.
-    # For more informtion take a look at the README.
+    # at '/data/clients'.
     title = "We have worked with"
     subtitle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. "
 
