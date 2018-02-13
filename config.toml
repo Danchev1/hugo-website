@@ -1,5 +1,5 @@
 baseurl = "https://hugo-theme.com"
-title = "Site title"
+title = "Hugo-Bulma Site"
 languageCode = "en-us"
 # Site language. Available translations in the theme's `/i18n` directory.
 defaultContentLanguage = "en"
